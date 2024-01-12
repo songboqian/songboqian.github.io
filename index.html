@@ -1682,7 +1682,7 @@ init();
 <script>
 let currentImage = 1;
 const totalImages = 5;
-const changeInterval = 3000;
+const changeInterval = 5000;
 
 function changeImage() {
     let imagePath = `imgs/${currentImage}.jpg`;
@@ -1694,7 +1694,7 @@ function changeImage() {
 function updateImage(imagePath) {
     document.getElementById('image-mask').style.backgroundImage = `url(${imagePath})`;
     // 重置位置并淡入新图片
-    gsap.to("#image-mask", {duration: 1, opacity: 0.7, y: 0});
+    gsap.to("#image-mask", {duration: 1, opacity: 0.4, y: 0});
 }
 
 setInterval(changeImage, changeInterval);
